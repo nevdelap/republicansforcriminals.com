@@ -10,39 +10,20 @@
                 margin: 0;
                 padding: 0;
             }
-            .header {
-                background-color: #DA1333;
+            .background_overlay {
+                background-size: cover;
                 box-sizing: border-box;
-                color: white;
-                font-size: 100px;
-                padding-bottom: 20px;
-                padding-top: 20px;
-                position: relative;
-                text-align: center;
-                top: 0;
-                vertical-align: middle;
-                width: 100%;
-            }
-            .container {
-                box-sizing: border-box;
-                background-color: white;
-                position: relative;
-                left: 50%;
-                transform: translateX(-50%);
-                max-width: 1500px;
-            }
-            .overlay {
-
-                color: black;
                 height: 100vh;
-                position: absolute;
+                left: 50%;
+                max-width: 1500px;
+                position: fixed;
                 top: 0;
-
+                transform: translateX(-50%);
                 width: 100%;
+                z-index: 2;
             }
             .background {
                 background-image: url('assets/flag.jpg');
-                background-size: cover;
                 z-index: 1;
             }
             .gradient {
@@ -50,11 +31,32 @@
                 z-index: 2;
             }
             .content {
+                box-sizing: border-box;
                 color: black;
                 font-size: 45px;
-                padding: 100px 100px 20px 100px;
+                height: calc(100vh + 500px);
+                left: 50%;
+                max-width: 1500px;
+                padding: 250px 100px 20px 100px;
+                position: relative;
                 text-align: justify;
+                transform: translateX(-50%);
+                width: 100%;
                 z-index: 3;
+            }
+            .header {
+                background-color: #E92828;
+                box-sizing: border-box;
+                color: white;
+                font-size: 100px;
+                padding-bottom: 20px;
+                padding-top: 20px;
+                position: fixed;
+                text-align: center;
+                top: 0;
+                vertical-align: middle;
+                width: 100%;
+                z-index: 4;
             }
             .footer {
                 background-color: #213875;
@@ -76,32 +78,30 @@
         </style>
     </head>
     <body>
+        <div class="background_overlay background">
+        </div>
+        <div class="background_overlay gradient">
+        </div>
         <div class="header">
             Republicans for Criminals
         </div>
-        <div class="container">
-            <div class="overlay background">
-            </div>
-            <div class="overlay gradient">
-            </div>
-            <div class="overlay content">
-                <p>
-                    If a political candidate were to be nominated as a party's candidate
-                    for the Office of President of the United States of America - and were
-                    to be convicted of a crime, many people would vote for that
-                    candidate. But not enough Americans would vote for them that they could win.
-                </p>
-                <p>
-                    It's simple, it's obvious, not enough Americans would vote for a person
-                    convicted of a crime.
-                </p>
-                <p>
-                    In the primaries, and in the general, vote for a candidate who can win!
-                </p>
-                <p style="text-align: center;">
-                    <img alt="Bald Eagle" src="/assets/bald-eagle.png" />
-                </p>
-            </div>
+        <div class="content">
+            <p>
+                If a political candidate were to be nominated as a party's candidate
+                for the Office of President of the United States of America - and were
+                to be convicted of a crime, many people would vote for that
+                candidate. But not enough Americans would vote for them that they could win.
+            </p>
+            <p>
+                It's simple, it's obvious, not enough Americans would vote for a person
+                convicted of a crime.
+            </p>
+            <p>
+                In the primaries, and in the general, vote for a candidate who can win!
+            </p>
+            <p style="text-align: center;">
+                <img alt="Bald Eagle" src="/assets/bald-eagle.png" />
+            </p>
         </div>
         <div class="footer">
             America first, economic growth, strong border security, and empowering citizens to shape a prosperous future!
